@@ -8,6 +8,7 @@ import deleteUser from "./controllers/delete"
 
 
 export async function AppRoutes(app: FastifyInstance) {
+    app.get('/', getAllUsers)
     app.get('/api/users', getAllUsers)
     app.delete('/api/users', deleteUser)
     app.post('/api/users', register)
